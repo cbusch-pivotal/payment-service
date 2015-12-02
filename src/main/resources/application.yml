@@ -1,0 +1,21 @@
+---
+spring:
+  application:
+    name: PAYMENT-SERVICE
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: ${vcap.application.port:8090}
+logging:
+  level:
+    io.pivotal.mastercard: DEBUG
+    org.springframework.web.service: DEBUG
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+simplify:
+  api:
+    publicKey: sbpb_NjMwNzE5YTctMDVmOC00MjE1LTlmZWYtMTMyYjc3MWVmNTE5
+    privateKey: GBR6NLJdf1ttQaBlywxT+WdG6AUHpUQ2UwuF7Nbp5xR5YFFQL0ODSXAOkNtXTToq
