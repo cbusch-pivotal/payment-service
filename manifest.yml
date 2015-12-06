@@ -2,11 +2,11 @@
 applications:
 - name: payment-service
   memory: 512M
-  host: payment-service-mc
+  host: payment-service
   path: target/payment-service-0.0.1.SNAPSHOT.jar
   buildpack: java_buildpack
   services:
     - payment-service-db
     - payment-mq
   env:
-    EUREKA_SERVER: http://payment-eureka-server-mc.pcf1.fe.gopivotal.com/eureka/
+    EUREKA_SERVER: http://payment-eureka-server.pcf1.fe.gopivotal.com/eureka/
